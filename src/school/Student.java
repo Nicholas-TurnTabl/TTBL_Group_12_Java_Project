@@ -13,7 +13,7 @@ public class Student implements Nameable, HasLevel{
     String name;
     String ID;
     List<Double> gradeList;
-    private Level studentLevel;
+    Level studentLevel;
 
     // Constructor
 
@@ -32,9 +32,6 @@ public class Student implements Nameable, HasLevel{
     }
 
     // Getters and setters
-
-
-
 
     public void setName(String name) {
         this.name = name;
@@ -58,6 +55,17 @@ public class Student implements Nameable, HasLevel{
 
 
     // Unique methods
+
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public Level getLevel() {
+        return studentLevel;
+    }
 
     // TODO: Create method to add new grades
 
@@ -116,13 +124,4 @@ public class Student implements Nameable, HasLevel{
                 '}';
     }
 
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public Level getLevel() {
-        return studentLevel;
-    }
 }
